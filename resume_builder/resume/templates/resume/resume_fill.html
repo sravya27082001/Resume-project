@@ -1,0 +1,15 @@
+{% extends 'resume/base.html' %}
+
+{% block content %}
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ personform.as_p }}
+        {{educationform.as_p}}
+        {{projectOrJobform.as_p}}
+        {{technicalSkillsform.as_p}}
+        {{positionOfResponsibilitesform.as_p}}
+        {{achievementsform}}
+        {{academicsform.as_p}}
+        {{areaOfInterestform.as_p}}
+        {{extracurricularsform.as_p}}
+        <button type="submit" class="save btn btn-default">Save</button>
+{% endblock %}

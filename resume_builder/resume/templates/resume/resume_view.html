@@ -1,0 +1,25 @@
+{% extends 'resume/base.html' %}
+{% load static %}
+
+          {% block content %}
+          <ol>
+            {% for person in persons %}
+            <li>User Info</li>
+            <ul>
+               <li>{{person.full_name}}</li>
+               <li>{{person.roll_no}}</li>
+               <li>{{person.email}}</li>
+               <li>{{person.college_mail}}</li>
+            </ul>
+            {%for e in education %}
+            <li>Education Info</li>
+            <ul>
+              <li>{{e.degree}}</li>
+              <li>{{e.passing_year}}</li>
+              <li>{{e.institute}}</li>
+              <li>{{e.percentage}}</li>
+            </ul>
+            {%endfor%}
+            {%endfor%}
+            </ol>
+        {% endblock %}
